@@ -94,7 +94,7 @@ def resend_email(prof_name, prof_mail, job_description, status, job_type,time_se
     # Define system prompt based on job type and status
     if status >= 1:
         if job_type == "Technical":    
-                about_me = "My name is Abhishek Teja Goli, and I am a graduate student pursuing my Master’s in Data Science at Wright State University. With a strong foundation in Python, machine learning, and data analysis, I am eager to contribute as a Teaching Assitant. My academic training and internship experience have equipped me with technical expertise, while my problem-solving skills and ability to explain complex concepts make me an effective mentor and collaborator. I am passionate about supporting academic and research initiatives by assisting students, conducting data-driven research, and streamlining analytical processes. You can reach me at goli.34@wright.edu."
+                about_me = "About you"
 
                 system_prompt = """
                     You are an advanced assistant designed to craft professional follow-up emails for technical job opportunities. You should tailor the content to reflect a genuine interest in these types of positions, emphasizing skills related to computer and software. Based on the provided context, your task is to generate a formal follow-up email that aligns with the tone and structure of the example below. Ensure the email includes a proper subject line, a respectful salutation, a concise and clear body, and a polite closing with appropriate contact information. 
@@ -127,7 +127,7 @@ def resend_email(prof_name, prof_mail, job_description, status, job_type,time_se
                 """
         
         else:  # Non-Technical
-                about_me = "My name is Abhishek Teja Goli, and I am a graduate student pursuing my Master’s in Data Science at Wright State University. With strong communication, teamwork, and time management skills, I am eager to contribute to campus services such as recreation, dining, or student support roles. My experience in customer service, tutoring, and collaborative projects has strengthened my ability to engage with diverse individuals, handle responsibilities efficiently, and provide excellent assistance. I am passionate about creating a welcoming and organized environment where students and faculty can have a positive experience. You can reach me at goli.34@wright.edu."
+                about_me = "About you"
 
                 system_prompt = """
                     You are an advanced assistant designed to craft professional follow-up emails for non-technical job opportunities. You should tailor the content to reflect a genuine interest in these types of positions, emphasizing skills such as communication, organization, and teamwork. Based on the provided context, your task is to generate a formal follow-up email that aligns with the tone and structure of the example below. Ensure the email includes a proper subject line, a respectful salutation, a concise and clear body, and a polite closing with appropriate contact information. 
@@ -170,7 +170,7 @@ def resend_email(prof_name, prof_mail, job_description, status, job_type,time_se
 # Function to update logs.csv
 def update_logs(unique_id, status, new_time):
     rows = []
-    with open('C:/Users/gabhi/Projects/Auto_mail_sender/logs.csv', 'r') as file:
+    with open('logs.csv path', 'r') as file:
         reader = csv.reader(file)
         rows = list(reader)
 
@@ -179,13 +179,13 @@ def update_logs(unique_id, status, new_time):
             row[5] = status  # Update status
             row[6] = new_time  # Update time
 
-    with open('C:/Users/gabhi/Projects/Auto_mail_sender/logs.csv', 'w', newline='') as file:
+    with open('logs.csv path', 'w', newline='') as file:
         writer = csv.writer(file)
         writer.writerows(rows)
 
 # Main function to process logs and resend emails
 def process_logs():
-    with open('C:/Users/gabhi/Projects/Auto_mail_sender/logs.csv', 'r') as file:
+    with open('logs.csv path', 'r') as file:
         reader = csv.reader(file)
         logs = list(reader)
 
@@ -230,9 +230,9 @@ def process_logs():
                 # print(subject,body)
                 if subject and body:
                     if job_type=="Technical":
-                        resume = "C:/Users/gabhi/Projects/Auto_mail_sender/Abhishek Teja Goli-Resume.pdf"
+                        resume = "resume path"
                     else:
-                        resume = "C:/Users/gabhi/Projects/Auto_mail_sender/Abhishek_Teja_Goli-Resume.pdf"
+                        resume = "resume path"
                     if send_email(subject, body, prof_mail, resume):
                         new_status = int(status) + 1
                         new_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
