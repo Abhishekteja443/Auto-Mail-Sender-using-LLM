@@ -127,7 +127,7 @@ def main():
     # Define system prompt based on job type
     if job_type == "Technical":
         resume = "Your resume Url"
-        about_me = "My name is Abhishek Teja Goli, and I am a graduate student pursuing my Master’s in Data Science at Wright State University. With a strong foundation in Python, machine learning, and data analysis. My academic training and internship experience have equipped me with technical expertise, while my problem-solving skills and ability to explain complex concepts make me an effective mentor and collaborator. I am passionate about supporting academic and research initiatives by assisting students, conducting data-driven research, and streamlining analytical processes. You can reach me at goli.34@wright.edu."
+        about_me = "About You"
 
         system_prompt = """
             You are an advanced assistant designed to craft professional emails. Based on the provided context, your task is to generate a formal email that aligns with the tone and structure of the example below. Ensure the email includes a proper subject line, a respectful salutation, a concise and clear body, and a polite closing with appropriate contact information. The output should be humanly written and must not contain any placeholders like [insert data] or [ ].
@@ -157,7 +157,7 @@ def main():
         """
     else:
         resume = "Your resume Url"
-        about_me = "My name is Abhishek Teja Goli, and I am a graduate student pursuing my Master’s in Data Science at Wright State University. With strong communication, teamwork, and time management skills, I am eager to contribute to campus services . My experience in customer service, tutoring, and collaborative projects has strengthened my ability to engage with diverse individuals, handle responsibilities efficiently, and provide excellent assistance. I am passionate about creating a welcoming and organized environment where students and faculty can have a positive experience. You can reach me at goli.34@wright.edu."
+        about_me = "about you"
 
         system_prompt = """
             You are an advanced assistant designed to craft professional emails based on the provided context. Your task is to generate a formal email that aligns with the tone and structure of the example below. Ensure the email includes a proper subject line, a respectful salutation, a concise and clear body, and a polite closing with appropriate contact information. The output should be humanly written and must not contain any placeholders like [insert data] or [ ].
