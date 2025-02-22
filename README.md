@@ -22,7 +22,7 @@ Ensure the following dependencies are installed before running the application:
 ### Installation
 1. Clone the repository:
    ```sh
-   git clone https://github.com/Abhishekteja443/Auto-Mail-Sender-using-LLM
+   git clone https://github.com/yourusername/auto-mail-sender.git
    cd auto-mail-sender
    ```
 2. Create a virtual environment and activate it:
@@ -54,6 +54,11 @@ python resend.py
 ```
 
 ## Configuration
+- Update `logs.csv` with previous email details.
+- Modify email templates and prompts in `app.py` and `resend.py` to suit your needs.
+- Ensure Outlook is installed and configured for email automation.
+- Change the `about_me` section in `app.py` and `resend.py` to reflect your personal details.
+- Update the paths for your resume and `logs.csv` in the script to match your local directory structure.
 - Update `logs.csv` with previous email details.
 - Modify email templates and prompts in `app.py` and `resend.py` to suit your needs.
 - Ensure Outlook is installed and configured for email automation.
