@@ -1,0 +1,12 @@
+streamlit
+ollama
+pywin32
+pythoncom
+numpy
+pandas
+re
+csv
+datetime
+logging
+uuid
+gc
