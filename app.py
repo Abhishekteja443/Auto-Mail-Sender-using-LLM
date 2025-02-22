@@ -126,7 +126,7 @@ def main():
     
     # Define system prompt based on job type
     if job_type == "Technical":
-        resume = "C:/Users/gabhi/Projects/Auto_mail_sender/Abhishek Teja Goli-Resume.pdf"
+        resume = "Your resume Url"
         about_me = "My name is Abhishek Teja Goli, and I am a graduate student pursuing my Master’s in Data Science at Wright State University. With a strong foundation in Python, machine learning, and data analysis. My academic training and internship experience have equipped me with technical expertise, while my problem-solving skills and ability to explain complex concepts make me an effective mentor and collaborator. I am passionate about supporting academic and research initiatives by assisting students, conducting data-driven research, and streamlining analytical processes. You can reach me at goli.34@wright.edu."
 
         system_prompt = """
@@ -156,7 +156,7 @@ def main():
             }
         """
     else:
-        resume = "C:/Users/gabhi/Projects/Auto_mail_sender/Abhishek_Teja_Goli-Resume.pdf"
+        resume = "Your resume Url"
         about_me = "My name is Abhishek Teja Goli, and I am a graduate student pursuing my Master’s in Data Science at Wright State University. With strong communication, teamwork, and time management skills, I am eager to contribute to campus services . My experience in customer service, tutoring, and collaborative projects has strengthened my ability to engage with diverse individuals, handle responsibilities efficiently, and provide excellent assistance. I am passionate about creating a welcoming and organized environment where students and faculty can have a positive experience. You can reach me at goli.34@wright.edu."
 
         system_prompt = """
